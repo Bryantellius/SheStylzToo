@@ -2,21 +2,21 @@ import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Clothing from "./views/Clothing";
-import Accessories from "./views/Accessories";
+import Cart from "./views/Cart";
 
 const App: React.FC<IAppProps> = () => {
   return (
-    <main className="container my-5">
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/clothing" component={Clothing} />
-          <Route path="/accessories" component={Accessories} />
-        </Switch>
-      </BrowserRouter>
-    </main>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/shop" component={Clothing} />
+        <Route path="/cart" component={Cart} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 };
 

@@ -3,20 +3,21 @@ import { NavLink } from "react-router-dom";
 
 const Header: React.FC<IHeaderProps> = () => {
   return (
-    <div
-      id="header"
-      className="d-flex justify-content-between align-items-center"
-    >
-      <h1>Header</h1>
-      <div className="d-flex justify-content-around align-items-center">
-        <NavLink className="nav-link text-dark" to="/">
-          Home
+    <div id="header">
+      <NavLink className="nav-link text-dark navLink" to="/">
+        <h3 className="text-dark text-center" id="headerTitle">
+          She Stylz Too
+        </h3>
+      </NavLink>
+      <div
+        id="headerLinks"
+        className="d-flex justify-content-around align-items-center p-2"
+      >
+        <NavLink activeClassName="border-bottom border-dark" className="nav-link text-dark navLink" to="/shop">
+          Shop
         </NavLink>
-        <NavLink className="nav-link text-dark" to="/clothing">
-          Clothing
-        </NavLink>
-        <NavLink className="nav-link text-dark" to="/accessories">
-          Accessories
+        <NavLink activeClassName="border-bottom border-dark" className="nav-link text-dark navLink" to="/cart">
+          Cart
         </NavLink>
       </div>
     </div>

@@ -1,5 +1,37 @@
 $theme-colors: (
-    'primary': #0091ea //Covalence Blue!  :D
+  "primary": #0091ea //Covalence Blue!  :D,,,
 );
 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+main {
+  margin-top: 5rem;
+}
+
+.navLink:hover {
+    font-weight: 500;
+}
+
+.test {
+  height: 400px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  background-color: white;
+}
+
+#headerLinks {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  z-index: 9999;
+}
+
+#headerTitle {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
